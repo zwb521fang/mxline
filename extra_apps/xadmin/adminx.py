@@ -9,7 +9,7 @@ from django.utils.translation import ugettext_lazy as _, ugettext
 from  xadmin import views
 
 class GlobalSetting(object):
-    site_title = "zwb"
+    site_title = "zwb-online"
     site_footer ='zwb'
     menu_style = 'accordion'
 xadmin.site.register(views.CommAdminView, GlobalSetting)

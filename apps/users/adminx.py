@@ -4,8 +4,13 @@ __date__ = '2018/1/10 20:07'
 
 from .models import EmailVerifyRecord
 from .models import *
-
+from xadmin import views
 import xadmin
+
+class BaseSetting(object):
+    enable_themes=True
+    use_bootswatch=True
+
 class EmailVerifyRecordAdmin(object):
     list_display = ['code','email','send_type','send_time']
     search_fields = ['code','email','send_type']
@@ -19,3 +24,4 @@ class BannerAdmin(object):
 
 xadmin.site.register(EmailVerifyRecord,EmailVerifyRecordAdmin)
 xadmin.site.register(Banner,BannerAdmin)
+xadmin.site.register(views.BaseAdminView,BaseSetting)
