@@ -25,7 +25,7 @@ class CourseOrg(models.Model):
     # detail = models.TextField(verbose_name=u"课程详情")
     # degree = models.CharField(choices=(("cj", "初级"), ("zj", "中级"), ("gj", "高级")), max_length=300)
     # learn_times = models.IntegerField(default=0, verbose_name=u"学习时长")
-    students = models.IntegerField(default=0, verbose_name=u"学习人数", max_length=10)
+    students = models.IntegerField(default=0, verbose_name=u"学习人数")
     category = models.CharField(max_length=20,choices=(("pxjg",'培训机构'),('gr','个人'),('gx','高校')),verbose_name=u'机构类别',default=u'培训机构')
     fav_nums = models.IntegerField(default=0, verbose_name=u"收藏人数")
     image = models.ImageField(upload_to="org/%Y/%m", verbose_name=u"封面图", max_length=100)

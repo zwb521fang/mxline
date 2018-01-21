@@ -33,7 +33,7 @@ urlpatterns = [
     url('^forget/$', ForgetPwdView.as_view(), name='forget_pwd'),
     url('^reset/(?P<active_code>.*)/$', ResetView.as_view(), name='reset_pwd'),
     url('^modify_pwd/$', ModifyPwdView.as_view(), name='modify_pwd'),
-    url('^org_list/$', OrgView.as_view(), name='org_list'),
+    url('^org/', include('organization.urls',namespace='org')),
     #配置上传文件的访问
     url('^media/(?P<path>.*)$', serve, {"document_root":MEDIA_ROOT}),
 

@@ -81,19 +81,19 @@
             {%  for course_org in all_orgs.object_list %}
                 <dl class="des difdes">
                     <dt>
-{#                        <a href="{% url 'org:org_home' course_org.id %}">#}
+                        <a href="{% url 'org:org_home' course_org.id %}">
                             <img width="200" height="120" class="scrollLoading" data-url="{{ MEDIA_URL }}{{ course_org.image }}"/>
-{#                        </a>#}
+                        </a>
                     </dt>
                     <dd>
                         <div class="clearfix">
-{#                            <a href="{% url 'org:org_home' course_org.id %}">#}
+                            <a href="{% url 'org:org_home' course_org.id %}">
                                 <h1>{{ course_org.name }}</h1>
                                 <div class="pic fl">
                                     <img src="{% static 'images/authentication.png' %}"/>
                                     <img src="{% static 'images/gold.png' %}"/>
                                 </div>
-{#                            </a>#}
+                            </a>
                         </div>
                         <ul class="cont">
                             <li class="first"><p class="pic9">课程数：<span>1</span></p><p class="c7">学习人数：<span>{{ course_org.students }}</span></p></li>
@@ -175,7 +175,7 @@
         cache: false,
         type: "POST",
         dataType: "json",
-{#        url: "{% url 'org:add_ask' %}",#}
+        url: "{% url 'org:add_ask' %}",
         //表单提交可以用 serialize 方法把 csrf token 一块序列化过来
         data: $('#jsStayForm').serialize(),
         async: true,
@@ -187,10 +187,6 @@
             $('#jsCompanyTips').html(data.msg)
           }
         },
-        {% comment %}error: function(error) {
-          console.log('error')
-          // console.log(error.responseText.msg)
-        }{% endcomment %}
       });
     });
   })
