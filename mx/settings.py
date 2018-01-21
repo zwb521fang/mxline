@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     # 'reversion'
     'captcha',
+    'pure_pagination'
 
 ]
 AUTH_USER_MODEL ='users.UserProfile'
@@ -77,6 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.media'
             ],
         },
     },
@@ -93,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "testdjango",
         'USER':'root',
-        'PASSWORD':"root",
+        'PASSWORD':"",
         'HOST':'127.0.0.1',
     }
 }
@@ -139,3 +141,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,"static")
 ]
+EMAIL_HOST ="smtp.sina.com"
+EMAIL_PORT =25
+EMAIL_HOST_USER  ='zwb521fang@sina.com'
+EMAIL_HOST_PASSWORD ="zwb5211226fang"
+EMAIL_USE_TLS=True
+EMAIL_FROM  ="zwb521fang@sina.com"
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
