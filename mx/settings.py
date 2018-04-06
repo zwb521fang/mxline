@@ -95,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "testdjango",
         'USER':'root',
-        'PASSWORD':"",
+        'PASSWORD':"root",
         'HOST':'127.0.0.1',
     }
 }
@@ -144,7 +144,7 @@ STATICFILES_DIRS=[
 EMAIL_HOST ="smtp.sina.com"
 EMAIL_PORT =25
 EMAIL_HOST_USER  ='zwb521fang@sina.com'
-EMAIL_HOST_PASSWORD ="zwb5211226fang"
+EMAIL_HOST_PASSWORD =""
 EMAIL_USE_TLS=True
 EMAIL_FROM  ="zwb521fang@sina.com"
 MEDIA_URL = '/media/'
